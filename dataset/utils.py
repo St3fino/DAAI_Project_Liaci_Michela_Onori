@@ -44,11 +44,6 @@ class DomainAdaptationDataset(Dataset):
        # Cyclic Sampling Approach #
        targ_i = index % len(self.target_examples)
 
-# Hint: randomly sample 'target_examples' to obtain targ_x
-       
-       # Random Sampling Approach #
-    #    targ_i = random.randint(0, len(self.target_examples) - 1)
-
        targ_x_path, _ = self.target_examples[targ_i]
        targ_x = Image.open(targ_x_path).convert('RGB')
        targ_x = self.T(targ_x)
