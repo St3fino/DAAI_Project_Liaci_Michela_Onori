@@ -1,5 +1,6 @@
 # Activation Shaping Function for Domain Adaptation
 Automotive Engineering - Autonomous and Connected Vehicle  
+Data Analysis and Artificial Intelligence course
 Politecnico di Torino
 
 February 2024
