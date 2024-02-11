@@ -50,24 +50,6 @@ class DomainAdaptationDataset(Dataset):
 
        return src_x, src_y, targ_x
 
-#####################################################
-# [OPTIONAL] TODO: modify 'BaseDataset' for the Domain Generalization setting. 
-# Hint: combine the examples from the 3 source domains into a single 'examples' list
-#class DomainGeneralizationDataset(Dataset):
-#    def __init__(self, examples, transform):
-#        self.examples = examples
-#        self.T = transform
-#    
-#    def __len__(self):
-#        return len(self.examples)
-#    
-#    def __getitem__(self, index):
-#        x1, x2, x3 = self.examples[index]
-#        x1, x2, x3 = self.T(x1), self.T(x2), self.T(x3)
-#        targ_x = self.T(targ_x)
-#        return x1, x2, x3
-
-######################################################
 
 class SeededDataLoader(DataLoader):
     def init(self, dataset: Dataset, batch_size=1, shuffle=None, 
