@@ -84,14 +84,6 @@ def train(model, data):
                     targ_x = targ_x.to(dtype=model.resnet.conv1.weight.dtype)
                     src_x = src_x.to(dtype=torch.half)
                     src_x = src_x.to(dtype=model.resnet.conv1.weight.dtype)
-
-                    # try:
-                    #     target_batch = next(target_iter)
-                    # except StopIteration:
-                    #     target_iter = iter(data['train'])
-                    #     target_batch = next(target_iter)
-                    # #####################################################################
-
                 
                     # targ_x = target_batch[0]
                     src_x , src_y, targ_x = src_x.to(CONFIG.device) , src_y.to(CONFIG.device), targ_x.to(CONFIG.device)
